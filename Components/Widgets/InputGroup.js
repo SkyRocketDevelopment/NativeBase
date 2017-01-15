@@ -3,6 +3,7 @@
 
 import React from 'react';
 import {View} from 'react-native';
+import { Ionicons } from '@exponent/vector-icons';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import Icon from './Icon';
 import Button from './Button';
@@ -130,9 +131,10 @@ export default class InputGroup extends NativeBaseComponent {
 
 		var iconElement = [];
 		iconElement = _.remove(childrenArray, function(item) {
-				if(item.type == Icon) {
-						return true;
-				}
+		  if(item.type == Icon || item.type == Ionicons) {
+                    return true;
+                  }
+
 		});
 
 		var buttonElement = [];
